@@ -8,7 +8,6 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="testTitle"/>
-          <include name="testExternalLinks"/>
         </methods>
       </class> <!-- tests.PortfolioTest -->
     </classes>
