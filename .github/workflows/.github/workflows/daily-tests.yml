@@ -31,3 +31,14 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 -ac &
           mvn clean test -B
+
+      - name: Notify Slack with test result
+        if: always()
+        uses: slackapi/slack-github-action@v1.25.0
+        with:
+          payload: |
+            {
+              "text": "🧪 *Portfolio Test Result:* `${{ job.status }}`\n📦 Workflow: `${{ github.workflow }}`\n🔁 Commit: `${{ github.sha }}`\n🌐 Repo: `${{ github.repository }}`"
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
