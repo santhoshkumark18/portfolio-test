@@ -7,7 +7,11 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testTitle"/>
+          <include name="testSocialLinks"/>
+          <include name="testResumeDownloadButton"/>
+          <include name="testSkillsSection"/>
+          <include name="testThemeToggleSwitch"/>
+          <include name="testSectionScrollNavigation"/>
         </methods>
       </class> <!-- tests.PortfolioTest -->
     </classes>

@@ -1,87 +1,87 @@
 package tests;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class PortfolioTest extends BaseTest {
 
-    String url = "https://santhoshkumark.me/";
-
-    @Ignore
     @Test
     public void testTitle() {
-        driver.get(url);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.titleContains("Santhosh Kumar K | SDET Portfolio"));
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains("Santhosh Kumar K | SDET Portfolio"), "Title check failed");
+        Assert.assertEquals(driver.getTitle(), "Santhosh Kumar K | SDET Portfolio");
     }
 
     @Test
-    public void testNavbarLinks() {
-        driver.get(url);
-
-        String[] sections = {"about", "skills", "projects", "experience", "contact"};
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+    public void testHeaderElements() {
+        WebElement header = driver.findElement(By.tagName("nav"));
+        Assert.assertTrue(header.isDisplayed());
+        String[] sections = {"About", "Skills", "Projects", "Experience", "Contact"};
         for (String section : sections) {
-            WebElement navLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='" + capitalize(section) + "']")));
+            Assert.assertTrue(driver.getPageSource().contains(section));
+        }
+    }
+
+    @Test
+    public void testSkillsSection() {
+    	try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        WebElement skills = driver.findElement(By.id("skills"));
+        
+        Assert.assertTrue(skills.isDisplayed());
+        String[] skillList = {"Java", "Selenium", "TestNG", "Cucumber", "UiPath", "Azure DevOps", "Git", "MySQL", "Postman", "Playwright"};
+        for (String skill : skillList) {
+            Assert.assertTrue(skills.getText().contains(skill));
+        }
+    }
+
+    @Test
+    public void testSectionScrollNavigation() {
+        String[] sections = {"about", "skills", "projects", "experience", "contact"};
+        for (String section : sections) {
+            WebElement navLink = driver.findElement(By.xpath("//li[contains(text(),'" + section.substring(0, 1).toUpperCase() + section.substring(1) + "')]"));
             navLink.click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(section)));
-            WebElement sectionEl = driver.findElement(By.id(section));
-            Assert.assertTrue(sectionEl.isDisplayed(), section + " section not visible");
+            WebElement sectionElement = driver.findElement(By.id(section));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", sectionElement);
+            Assert.assertTrue(sectionElement.isDisplayed());
         }
     }
 
     @Test
-    public void testThemeToggle() {
-        driver.get(url);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement themeToggle = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Toggle Theme']")));
-        String initialClass = driver.findElement(By.tagName("html")).getAttribute("class");
-        themeToggle.click();
-        wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.tagName("html"), "class", initialClass)));
-        String toggledClass = driver.findElement(By.tagName("html")).getAttribute("class");
-        Assert.assertNotEquals(initialClass, toggledClass, "Theme did not toggle");
-    }
-
-    @Ignore
-    @Test
-    public void testExternalLinks() {
-        driver.get(url);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        String[][] links = {
-            {"LinkedIn", "https://www.linkedin.com/in/santhoshkumark18/"},
-            {"GitHub", "https://github.com/santhoshkumark18"},
-            {"Gmail", "mailto:santhoshkumark1801@gmail.com"} // this opens gmail compose
-        };
-
-        for (String[] link : links) {
-            WebElement anchor = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, '" + link[1] + "')]")));
-            Assert.assertTrue(anchor.isDisplayed(), link[0] + " link not found");
-        }
+    public void testThemeToggleSwitch() {
+        WebElement toggle = driver.findElement(By.cssSelector("button[aria-label='Toggle Theme']"));
+        String initialTheme = driver.findElement(By.tagName("html")).getAttribute("class");
+        toggle.click();
+        String newTheme = driver.findElement(By.tagName("html")).getAttribute("class");
+        Assert.assertNotEquals(initialTheme, newTheme);
     }
 
     @Test
-    public void testResumeDownloadLink() {
-        driver.get(url);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement resumeButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'Resume')]")));
-        Assert.assertTrue(resumeButton.isDisplayed(), "Resume button not visible");
-        Assert.assertTrue(resumeButton.getAttribute("href").endsWith(".pdf"), "Resume link does not point to PDF");
+    public void testSocialLinks() {
+    	try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // Wait for the page to load completely
+        WebElement linkedIn = driver.findElement(By.cssSelector("a[href*='linkedin.com/in/santhoshkumark18']"));
+        Assert.assertTrue(linkedIn.isDisplayed());
+
+        WebElement github = driver.findElement(By.cssSelector("a[href*='github.com/santhoshkumark18']"));
+        Assert.assertTrue(github.isDisplayed());
+
+        WebElement email = driver.findElement(By.cssSelector("a[href*='santhoshkumark1801@gmail.com']"));
+        Assert.assertTrue(email.isDisplayed());
     }
 
-    private String capitalize(String word) {
-        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    @Test
+    public void testResumeDownloadButton() {
+        WebElement resumeBtn = driver.findElement(By.cssSelector("a[download]"));
+        Assert.assertTrue(resumeBtn.isDisplayed());
+        Assert.assertTrue(resumeBtn.getAttribute("href").endsWith(".pdf"));
     }
 }

@@ -1,96 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="5" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-28T22:11:48 IST" name="Default suite" finished-at="2025-06-28T22:12:29 IST" duration-ms="41093">
+  <suite started-at="2025-06-28T22:43:51 IST" name="Default suite" finished-at="2025-06-28T22:44:31 IST" duration-ms="39785">
     <groups>
     </groups>
-    <test started-at="2025-06-28T22:11:48 IST" name="Default test" finished-at="2025-06-28T22:12:29 IST" duration-ms="41093">
+    <test started-at="2025-06-28T22:43:51 IST" name="Default test" finished-at="2025-06-28T22:44:31 IST" duration-ms="39785">
       <class name="tests.PortfolioTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:11:48 IST" name="setUp" finished-at="2025-06-28T22:11:53 IST" duration-ms="5292" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:43:52 IST" name="setUp" finished-at="2025-06-28T22:43:57 IST" duration-ms="5666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNavbarLinks()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:11:53 IST" name="testNavbarLinks" finished-at="2025-06-28T22:11:59 IST" duration-ms="5299" status="PASS">
+        <test-method signature="testHeaderElements()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:43:57 IST" name="testHeaderElements" finished-at="2025-06-28T22:43:58 IST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNavbarLinks -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:11:59 IST" name="tearDown" finished-at="2025-06-28T22:11:59 IST" duration-ms="151" status="PASS">
+        </test-method> <!-- testHeaderElements -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:43:58 IST" name="tearDown" finished-at="2025-06-28T22:43:58 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:11:59 IST" name="setUp" finished-at="2025-06-28T22:12:03 IST" duration-ms="3856" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:43:58 IST" name="setUp" finished-at="2025-06-28T22:44:01 IST" duration-ms="2824" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testResumeDownloadLink()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:03 IST" name="testResumeDownloadLink" finished-at="2025-06-28T22:12:07 IST" duration-ms="3968" status="PASS">
+        <test-method signature="testResumeDownloadButton()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:01 IST" name="testResumeDownloadButton" finished-at="2025-06-28T22:44:01 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testResumeDownloadLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:07 IST" name="tearDown" finished-at="2025-06-28T22:12:07 IST" duration-ms="154" status="PASS">
+        </test-method> <!-- testResumeDownloadButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:01 IST" name="tearDown" finished-at="2025-06-28T22:44:01 IST" duration-ms="365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:07 IST" name="setUp" finished-at="2025-06-28T22:12:11 IST" duration-ms="4243" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:01 IST" name="setUp" finished-at="2025-06-28T22:44:04 IST" duration-ms="3126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testThemeToggle()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:11 IST" name="testThemeToggle" finished-at="2025-06-28T22:12:18 IST" duration-ms="7536" status="PASS">
+        <test-method signature="testSectionScrollNavigation()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:04 IST" name="testSectionScrollNavigation" finished-at="2025-06-28T22:44:05 IST" duration-ms="962" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testThemeToggle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:18 IST" name="tearDown" finished-at="2025-06-28T22:12:19 IST" duration-ms="179" status="PASS">
+        </test-method> <!-- testSectionScrollNavigation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:05 IST" name="tearDown" finished-at="2025-06-28T22:44:05 IST" duration-ms="276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:19 IST" name="setUp" finished-at="2025-06-28T22:12:23 IST" duration-ms="3913" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:05 IST" name="setUp" finished-at="2025-06-28T22:44:09 IST" duration-ms="3228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTitle()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:23 IST" name="testTitle" finished-at="2025-06-28T22:12:28 IST" duration-ms="5875" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Title check failed expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Title check failed expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at tests.PortfolioTest.testTitle(PortfolioTest.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testSkillsSection()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:09 IST" name="testSkillsSection" finished-at="2025-06-28T22:44:14 IST" duration-ms="5294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSkillsSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:14 IST" name="tearDown" finished-at="2025-06-28T22:44:14 IST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:14 IST" name="setUp" finished-at="2025-06-28T22:44:18 IST" duration-ms="3904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSocialLinks()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:18 IST" name="testSocialLinks" finished-at="2025-06-28T22:44:23 IST" duration-ms="5171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSocialLinks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:23 IST" name="tearDown" finished-at="2025-06-28T22:44:24 IST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:24 IST" name="setUp" finished-at="2025-06-28T22:44:27 IST" duration-ms="3798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testThemeToggleSwitch()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:27 IST" name="testThemeToggleSwitch" finished-at="2025-06-28T22:44:28 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testThemeToggleSwitch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:28 IST" name="tearDown" finished-at="2025-06-28T22:44:28 IST" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:28 IST" name="setUp" finished-at="2025-06-28T22:44:31 IST" duration-ms="2837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTitle()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:31 IST" name="testTitle" finished-at="2025-06-28T22:44:31 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@353352b6]" started-at="2025-06-28T22:12:28 IST" name="tearDown" finished-at="2025-06-28T22:12:29 IST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PortfolioTest@4681c175]" started-at="2025-06-28T22:44:31 IST" name="tearDown" finished-at="2025-06-28T22:44:31 IST" duration-ms="374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
